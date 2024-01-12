@@ -65,11 +65,11 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:name, :position, :companies_id)
+      params.require(:user).permit(:name, :position, :company_id)
     end
 
     def configure_permitted_parameters 
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password, :password_confirmation, :role_id, :companies_id]) 
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password, :password_confirmation, :role_id, :company_id]) 
       end 
        
 end
