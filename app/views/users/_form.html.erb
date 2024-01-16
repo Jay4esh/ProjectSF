@@ -17,9 +17,10 @@
   </div>
 
   <div class="field">
-    <%= form.label :ROLE %><br>
-    <%= form.collection_select :role_id, Role.all, :id, :role_name %>
-  </div>
+  <%= form.label :ROLE %><br>
+  <%= form.collection_select :role_id, Role.all, :id, :role_name %>
+</div>
+
 
   <div>
     <%= form.label :position, style: "display: block" %>
@@ -34,5 +35,5 @@
 
   <div>
     <%= form.submit %>
-  </div>
+  </div> 
 <% end %>

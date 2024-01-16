@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # load_and_authorize_resource
+  load_and_authorize_resource
   before_action :set_user, only: %i[ show edit update destroy ]
 
   # GET /users or /users.json
@@ -13,8 +13,11 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+  
+    @roles = Role.all
     @user = User.new
   end
+  
 
   # GET /users/1/edit
   def edit

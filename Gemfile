@@ -67,5 +67,12 @@ group :test do
   gem "selenium-webdriver"
 end
 
+group :development, :test do
+  gem 'faker'
+end
+
 gem "devise", "~> 4.9"
 gem 'cancancan'
+gem 'pry'
+
+

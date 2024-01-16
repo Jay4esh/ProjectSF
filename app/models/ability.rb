@@ -5,13 +5,15 @@ class Ability
 
   def initialize(user)
     user ||= User.new
-    if user.superadmin?
-      can:manage, :all
-    elsif user.admin?
-      can:manage, :user
-    else
-      can:read, :all
+      if user.role_id == 1
+        can :manage, :all
+      elsif user.role_id == 2
+        can :manage, :all
+      else
+        can :read, :all
+      end
     end
+end
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?
@@ -36,5 +38,5 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/blob/develop/docs/define_check_abilities.md
-  end
-end
+#   end
+# end

@@ -7,6 +7,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable
 
+  # def role?(role)
+  #  role.include? role.to_s
+  # end
+
+      
   # enum role: %i[super_admin admin normal_user]
   # after_initialize :set_default_role, if: :new_record?
   # # set default role to user  if not set
