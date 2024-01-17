@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_16_052629) do
-  create_table "business_partners", force: :cascade do |t|
+ActiveRecord::Schema[7.1].define(version: 2024_01_17_083435) do
+  create_table "businesspartners", force: :cascade do |t|
     t.string "customer_code"
     t.string "customer_name"
     t.integer "corporate_number"

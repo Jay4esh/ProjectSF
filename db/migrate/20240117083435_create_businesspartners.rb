@@ -1,6 +1,6 @@
-class CreateBusinessPartners < ActiveRecord::Migration[7.1]
+class CreateBusinesspartners < ActiveRecord::Migration[7.1]
   def change
-    create_table :business_partners do |t|
+    create_table :businesspartners do |t|
       t.string :customer_code
       t.string :customer_name
       t.integer :corporate_number

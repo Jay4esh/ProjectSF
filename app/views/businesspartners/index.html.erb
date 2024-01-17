@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Businesspartners</h1>
+<%= render 'businesspartners/search_form'%>
+<%= sort_link(@q, :customer_name, "Customer Name", default_order: :asc) %>
+
+<div id="businesspartners">
+<ul>
+<% @businesspartners.each do |businesspartner| %>
+  <li>
+    <%= link_to businesspartner.customer_name, businesspartner %>
+  </li>
+<% end %>
+</ul>
+</div>
+
+<%= link_to "New businesspartner", new_businesspartner_path %>
