@@ -19,9 +19,7 @@
   <div class="field">
   <%= form.label :ROLE %><br>
   <%= form.collection_select :role_id, Role.all, :id, :role_name %>
-</div>
-
-
+</div>  
   <div>
     <%= form.label :position, style: "display: block" %>
     <%= form.text_field :position %>

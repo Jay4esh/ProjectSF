@@ -1,0 +1,21 @@
+<%= form_with(model: @expense, local: true) do |form| %>
+    <div class="field">
+      <%= form.label :amount %>
+      <%= form.text_field :amount %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.text_area :description %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :business_partner_id %>
+      <%= form.collection_select :business_partner_id, BusinessPartner.all, :id, :name %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+  

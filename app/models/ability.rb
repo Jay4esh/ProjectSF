@@ -9,8 +9,8 @@ class Ability
         can :manage, :all
       elsif user.role_id == 2
         can :manage, :all
-      else
-        can :read, :all
+      else 
+        can :manage, :all
       end
     end
 end

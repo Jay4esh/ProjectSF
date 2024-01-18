@@ -1,0 +1,23 @@
+<p>
+  <strong>Amount:</strong>
+  <%= @expense.amount %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @expense.description %>
+</p>
+
+<p>
+  <strong>Business Partner:</strong>
+  <%= @expense.business_partner.name %>
+</p>
+
+<p>
+  <strong>Approver:</strong>
+  <%= @expense.approver.present? ? @expense.approver.username : 'Pending Approval' %>
+</p>
+
+<% if @expense.next_approver == current_user %>
+  <%= link_to 'Approve Expense', approve_expense_path(@expense), method: :put %>
+<% end %>
